@@ -1,0 +1,169 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+nav{
+    font-family:'Ubuntu', sans-serif;
+    zoom:100%;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    list-style-type:none;
+    height:80px;
+    color:white;
+    background-color:black;
+}
+
+nav ul li{
+    padding:0 12px;
+
+}
+
+.brand img{
+    height:80px;
+    width:80px;
+    padding:0 8px; /*Thoda sa right side rakhna photo ko corner se*/
+    clip-path:circle();
+}
+
+.brand{  /*Spotify ki baat ho rhi hai*/
+    display:flex;
+    align-items:center;
+    font-weight:bolder;
+    font-size:1.3rem;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round',sans-serif;
+    width: 85%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    /*TO set the background image position*/
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-position: center;
+    zoom:75%;
+}
+
+.songitemcontainer{
+    margin-bottom:74px;
+}
+
+.songlist .ul {
+    margin-block-start: 0;
+    width: 43px;
+    margin: 0 23px;
+}
+
+.songItem{
+    height:70px;
+    display:flex; 
+    background-color:white;
+    width:30%;
+    color:black;
+    margin:12px 0;
+    justify-content:space-between;
+    align-content:center;
+    border-radius:34px;
+}
+
+    
+    .bottom {
+        position: sticky;
+        /*Iss yeh hoga ki page scroll krne pe bhi wo patti black wali fixed rahegi user ke krne se se upr neeche nhi hogi*/
+        height: 100px;
+        background-color: black;
+        color: white;
+        bottom: 0; /*Wo sound track wali patti ko neeche le jaane ke liye*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .songName{  /*Taaki ham us Song ke naam ko centre mai rakh ske*/
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+.icons{
+   margin-top:14px;
+}
+
+.icons i{
+    cursor:pointer;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+    .timestamp i{
+        cursor:pointer;
+    }
+    /*Wo neeche wala song ko forward/backward krne ka kitna lamba hona chaiye*/
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Center mai laane ke liye pehle usko
+    1. Absolute kiya
+    2. Display Flex;
+    isse yeh hua ki ab wo background div ke upr aa gya and usko set kiya
+    3. Right 
+    4. Left Mention krke center pe le aae
+*/
+.centergif {
+    position:absolute;
+    display:flex;
+    left:35%;
+    right:50%;
+
+}
+
+.centergif img{
+    opacity:0;
+    transition:opacity 0.4s ease-in;
+}
+/*------------------------------------------------------------------------------------------------*/
+.center .img{
+    position:absolute;
+    width:30%;
+    height:30%;
+    display:inline-block;
+}
+
+.songInfo {
+    position: absolute;
+    left: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Varela Round',sans-serif;
+}
+
+.songInfo img{
+    opacity:0;
+    transition:opacity 0.4s ease-in; /*iska yeh matlab hai ki wo gif 1 sec ke baad dikhegi when we add JS also*/
+}
